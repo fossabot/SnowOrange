@@ -12,5 +12,8 @@ jobs:
         name: 'Install Qt'
         uses: jurplel/install-qt-action@v1.0.0
       -
+        name: 'Install dependencies'
+        run: 'sudo apt install libgl1-mesa-dev'
+      -
         name: 'Build project'
         run: 'qmake -makefile && make'
